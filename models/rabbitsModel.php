@@ -12,7 +12,7 @@ class RabbitsModel extends Model
 		$ratio = ceil(79/35);
 		if($type == 'Doe')
 		{
-			$sql = "SELECT family_id FROM `family` Where family_doe_count < 3 LIMIT 1";
+			$sql = "SELECT family_id FROM `family` Where family_doe_count < $ratio LIMIT 1";
 			$result = $this->connection->Query($sql);
 			if($result) {
 				$count_sql = "SELECT COUNT(*) from rabbits";

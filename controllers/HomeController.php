@@ -32,4 +32,9 @@ class HomeController extends Controller
 		$this->view->render('family/list.phtml',$data);
 	}
 
+	public function familytobeAction()
+	{
+		
+	}
+
 }
