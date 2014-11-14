@@ -1,0 +1,21 @@
+<table>
+<thead>
+<th>Family ID</th>
+<th>Family Code</th>
+<th>Family Created Date</th>
+<th>Family Doe Count</th>
+<th>Family Buck Count</th>
+
+</thead>
+<tbody>
+<?php foreach($view_families as $family):?>
+<tr>
+<td><?php echo $family['family_id'];?></td>
+<td><?php echo $family['family_code'];?></td>
+<td><?php echo $family['family_created_date'];?></td>
+<td><?php echo $family['family_doe_count'];?></td>
+<td><?php echo $family['family_buck_count'];?></td>
+</tr>
+<?php endforeach;?>
+</tbody>
+</table>
