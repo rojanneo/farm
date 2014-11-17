@@ -114,6 +114,36 @@ class RabbitsModel extends Model
 		// }
 	}
 
+	public function getRabbitsByFamilyId($f_id)
+	{
+		$sql = "SELECT * FROM rabbits WHERE rabbit_family = $f_id";
+		$rabbits = $this->connection->Query($sql);
+		if($rabbits)
+			return $rabbits;
+		else
+			return false;
+	}
+
+	public function getDoesByFamilyId($f_id)
+	{
+		$sql = "SELECT * FROM rabbits WHERE rabbit_family = $f_id AND rabbit_type = 'Doe'";
+		$rabbits = $this->connection->Query($sql);
+		if($rabbits)
+			return $rabbits;
+		else
+			return false;
+	}
+
+	public function getBucksByFamilyId($f_id)
+	{
+		$sql = "SELECT * FROM rabbits WHERE rabbit_family = $f_id AND rabbit_type = 'Buck'";
+		$rabbits = $this->connection->Query($sql);
+		if($rabbits)
+			return $rabbits;
+		else
+			return false;
+	}
+
 	public function addInitialBucks()
 	{
 		//$bucks = 

@@ -1,0 +1,19 @@
+<table>
+<thead>
+<th>Litter Id</th>
+<th>Litter DOB</th>
+<th>Litter Family</th>
+<th>Mating ID</th>
+<th>Actions</th>
+</thead>
+<tbody>
+<?php foreach($view_litters as $litter):?>
+	<tr>
+	<td><?php echo $litter['litter_id'];?></td>
+	<td><?php echo $litter['litter_dob'];?></td>
+	<td><?php echo $litter['litter_family'];?></td>
+	<td><?php echo $litter['mating_id'];?></td>
+	</tr>
+<?php endforeach;?>
+</tbody>
+</table>

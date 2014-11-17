@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<th>Mating ID</th>
+		<th>Buck</th>		
+		<th>Doe</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+	<?php foreach($view_matings as $mating):?>
+		<tr>
+		<td><?php echo $mating['mating_id'];?></td>
+		<td><?php echo $mating['mating_buck_id'];?></td>
+		<td><?php echo $mating['mating_doe_id'];?></td>
+		<td><a href="<?php echo URL.'home/addLitters/'.$mating['mating_id']?>">Add Litters</a></td>
+		</tr>
+	<?php endforeach;?>
+	</tbody>
+</table>
