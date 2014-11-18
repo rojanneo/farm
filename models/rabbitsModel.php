@@ -134,6 +134,26 @@ class RabbitsModel extends Model
 			return false;
 	}
 
+	public function getAllDoes()
+	{
+		$sql = "SELECT * FROM rabbits WHERE rabbit_type='Doe'";
+		$rabbits = $this->connection->Query($sql);
+		if($rabbits)
+			return $rabbits;
+		else
+			return false;
+	}
+
+	public function getAllBucks()
+	{
+		$sql = "SELECT * FROM rabbits WHERE rabbit_type='Buck'";
+		$rabbits = $this->connection->Query($sql);
+		if($rabbits)
+			return $rabbits;
+		else
+			return false;
+	}
+
 	public function getBucksByFamilyId($f_id)
 	{
 		$sql = "SELECT * FROM rabbits WHERE rabbit_family = $f_id AND rabbit_type = 'Buck'";

@@ -104,4 +104,11 @@ class HomeController extends Controller
 		$this->view->render('litters/list.phtml',$data);
 	}
 
+	public function addToFamilyAction($litter_id)
+	{
+		$does = getModel('rabbits')->getAllDoes();
+		echo '<pre>';
+		var_dump($does);
+	}
+
 }
